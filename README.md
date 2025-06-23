@@ -1,2 +1,2 @@
-# phpdemo
-fortest
+# samplephp
+just for demo
