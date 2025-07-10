@@ -4,6 +4,6 @@
         <title>PHP Test</title>
     </head>
     <body>
-        <?php echo '<p>Hello World Samnang 07-10-2025asdf</p>'; ?>
+        <?php echo '<p>Hello World! Production-red Pod nginx-red</p>'; ?>
     </body>
 </html>
