@@ -4,6 +4,6 @@
         <title>PHP Test</title>
     </head>
     <body>
-        <?php echo '<p>Hello World! Production-red Pod nginx-red</p>'; ?>
+        <?php echo '<p>Hello World! Production-red Pod nginx-red New Name</p>'; ?>
     </body>
 </html>
