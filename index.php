@@ -4,7 +4,7 @@
     $username="niph";
     $password="a0b310084c8ab413ace944be94008be5a0704d18";
     $dbname="mydb";
-    $port="3306";
+    $port="31476";
     // End Vault
 
     try {
