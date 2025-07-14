@@ -1,8 +1,8 @@
 <?php
     // Begin Vault (this is in a vault, not actually hard-coded)
     $host="192.168.20.13";
-    $username="niph";
-    $password="a0b310084c8ab413ace944be94008be5a0704d18";
+    $username="root";
+    $password="382096a3207028829496cb77202a76d1e76549e0";
     $dbname="mydb";
     $port="31476";
     // End Vault
