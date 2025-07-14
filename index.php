@@ -1,10 +1,10 @@
 <?php
     // Begin Vault (this is in a vault, not actually hard-coded)
     $host="192.168.20.13";
-    $username="root";
-    $password="382096a3207028829496cb77202a76d1e76549e0";
+    $username="kimheang";
+    $password="Seavminh";
     $dbname="mydb";
-    $port="31476";
+    $port="3306";
     // End Vault
 
     try {
