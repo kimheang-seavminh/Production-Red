@@ -13,11 +13,12 @@ try{
                         $db_pass,
                         $db_name,
                         $port); }
+    catch(mysqli_sql_excption){
+        echo"Not Connect!";
+    }
     if($conn){
         echo"Connected!";
 }
-else{
-    echo"Not Connect !";}
     ?>
 
    // try {
