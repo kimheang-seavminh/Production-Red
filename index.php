@@ -1,7 +1,7 @@
 
 <?php
 $host = '192.168.20.12'; // or use the external IP if exposed via LoadBalancer
-$port = 31476;
+$port = '31476';
 $username = 'kimheang'; // or your configured username
 $password = 'Seavminh@2024'; // get from Kubernetes secret
 $database = 'dms_db'; // or your specific database name
