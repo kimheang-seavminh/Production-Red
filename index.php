@@ -1,35 +1,25 @@
 <?php
-    // Begin Vault (this is in a vault, not actually hard-coded)
-    $db_server="192.168.20.12";
-    $db_user="kimheang";
-    $db_pass="Seavminh@2024";
-    $db_name="dms_db";
-    $port="31476";
-    $conn = "";
-    // End Vault
-try{ 
-    $conn = mysql_connect($db_server,
-                        $db_user,
-                        $db_pass,
-                        $db_name,
-                        $port); }
-    catch(mysql_sql_excption){
-        echo"Not Connect!";
-    }
-    if($conn){
-        echo"Connected!";
+# Fill our vars and run on cli
+# $ php -f db-connect-test.php
+
+$dbname = 'dms_db';
+$dbuser = 'kimheang';
+$dbpass = 'Seavminh@2024';
+$dbhost = '192.168.20.12';
+$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+mysql_select_db($dbname) or die("Could not open the db '$dbname'");
+
+$test_query = "SHOW TABLES FROM $dbname";
+$result = mysql_query($test_query);
+
+$tblCnt = 0;
+while($tbl = mysql_fetch_array($result)) {
+  $tblCnt++;
+  #echo $tbl[0]."<br />\n";
 }
-    ?>
 
-   // try {
-   //     $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8", $username, $password);
-   //     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-   //     echo "I am connected.<br/>";
-
-        // ... continue with your code
-
-        // PDO closes connection at end of script
-  //  } catch (PDOException $e) {
-   //     echo 'PDO Exception: ' . $e->getMessage();
-  //      exit();
-  //  }
+if (!$tblCnt) {
+  echo "There are no tables<br />\n";
+} else {
+  echo "There are $tblCnt tables<br />\n";
+}
