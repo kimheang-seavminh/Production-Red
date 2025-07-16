@@ -3,7 +3,7 @@
     $host="192.168.20.12";
     $username="kimheang";
     $password="Seavminh@2024";
-    $dbname="dms-_db";
+    $dbname="dms_db";
     $port="31476";
     // End Vault
 
