@@ -6,6 +6,7 @@ $dbname = 'dms_db';
 $dbuser = 'kimheang';
 $dbpass = 'Seavminh@2024';
 $dbhost = '192.168.20.12';
+$port = '31476';
 $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 mysql_select_db($dbname) or die("Could not open the db '$dbname'");
 
