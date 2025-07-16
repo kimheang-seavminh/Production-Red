@@ -4,7 +4,7 @@
     $db_user="kimheang";
     $db_pass="Seavminh@2024";
     $db_name="dms_db";
-    //$port="31476";
+    $port="31476";
     $conn = "";
     // End Vault
 try{ 
