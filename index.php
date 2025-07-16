@@ -1,22 +1,35 @@
 <?php
     // Begin Vault (this is in a vault, not actually hard-coded)
-    $host="192.168.20.12";
-    $username="kimheang";
-    $password="Seavminh@2024";
-    $dbname="dms_db";
+    $db_server="192.168.20.12";
+    $db_user="kimheang";
+    $db_pass="Seavminh@2024";
+    $db_name="dms_db";
     $port="31476";
+    $conn = "";
     // End Vault
+try{ 
+    $conn=mysqli_connect($db_server,
+                        $db_user,
+                        $db_pass,
+                        $db_name,
+                        $port); }
+    if($conn){
+        echo"Connected!";
+}
+else{
+    echo"Not Connect !";
+    
 
-    try {
-        $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8", $username, $password);
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "I am connected.<br/>";
+   // try {
+   //     $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8", $username, $password);
+   //     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   //     echo "I am connected.<br/>";
 
         // ... continue with your code
 
         // PDO closes connection at end of script
-    } catch (PDOException $e) {
-        echo 'PDO Exception: ' . $e->getMessage();
-        exit();
-    }
+  //  } catch (PDOException $e) {
+   //     echo 'PDO Exception: ' . $e->getMessage();
+  //      exit();
+  //  }
 ?>
