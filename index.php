@@ -1,26 +1,16 @@
+
 <?php
-# Fill our vars and run on cli
-# $ php -f db-connect-test.php
+$host = '192.168.20.12'; // or use the external IP if exposed via LoadBalancer
+$port = 31476;
+$username = 'kimheang'; // or your configured username
+$password = 'Seavminh@2024'; // get from Kubernetes secret
+$database = 'dms_db'; // or your specific database name
 
-$dbname = 'dms_db';
-$dbuser = 'kimheang';
-$dbpass = 'Seavminh@2024';
-$dbhost = '192.168.20.12';
-$port = '31476';
-$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
-mysql_select_db($dbname) or die("Could not open the db '$dbname'");
+$conn = new mysqli($host, $username, $password, $database, $port);
 
-$test_query = "SHOW TABLES FROM $dbname";
-$result = mysql_query($test_query);
-
-$tblCnt = 0;
-while($tbl = mysql_fetch_array($result)) {
-  $tblCnt++;
-  #echo $tbl[0]."<br />\n";
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-
-if (!$tblCnt) {
-  echo "There are no tables<br />\n";
-} else {
-  echo "There are $tblCnt tables<br />\n";
-}
+echo "Connected successfully to MySQL!";
+$conn->close();
+?>
