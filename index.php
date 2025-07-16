@@ -17,7 +17,7 @@ try{
         echo"Connected!";
 }
 else{
-    echo"Not Connect !";
+    echo"Not Connect !";}
     ?>
 
    // try {
