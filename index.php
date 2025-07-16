@@ -18,7 +18,7 @@ try{
 }
 else{
     echo"Not Connect !";
-    
+    ?>
 
    // try {
    //     $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8", $username, $password);
@@ -32,4 +32,3 @@ else{
    //     echo 'PDO Exception: ' . $e->getMessage();
   //      exit();
   //  }
-?>
