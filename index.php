@@ -8,12 +8,12 @@
     $conn = "";
     // End Vault
 try{ 
-    $conn = mysqli_connect($db_server,
+    $conn = mysql_connect($db_server,
                         $db_user,
                         $db_pass,
                         $db_name,
                         $port); }
-    catch(mysqli_sql_excption){
+    catch(mysql_sql_excption){
         echo"Not Connect!";
     }
     if($conn){
