@@ -2,7 +2,7 @@
 $servername = "192.168.20.12";
 $port = '32364';
 $username = "kimheang";
-$password "'Seavminh@2024'
+$password = "Seavminh@2024";
 $database = 'dms_db';
 
 try {
