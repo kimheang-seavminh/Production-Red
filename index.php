@@ -1,16 +1,20 @@
 
+
+
+
 <?php
-$host = '192.168.20.12'; // or use the external IP if exposed via LoadBalancer
+$servername = "192.168.20.12";
 $port = '32364';
-$username = 'kimheang'; // or your configured username
-$password = 'Seavminh@2024'; // get from Kubernetes secret
-$database = 'dms_db'; // or your specific database name
+$username = "kimheang";
+$password "'Seavminh@2024'
+$database = 'dms_db';
 
-$conn = new mysqli($host, $username, $password, $database, $port);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=dms_db", $username, $password, $username, $database, $port);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
 }
-echo "Connected successfully to MySQL!";
-$conn->close();
 ?>
