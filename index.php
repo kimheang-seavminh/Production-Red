@@ -1,7 +1,7 @@
 
 <?php
 $host = '192.168.20.12';
-$db   = 'dms_db';
+$db   = 'mydb';
 $user = 'root';
 $pass = '382096a3207028829496cb77202a76d1e76549e0';
 $port = '32364';
