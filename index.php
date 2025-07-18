@@ -1,9 +1,9 @@
 <?php
 $servername = "192.168.20.12";
-$port = '32364';
+$port = "32364";
 $username = "kimheang";
 $password = "Seavminh@2024";
-$database = 'dms_db';
+$database = "dms_db";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=dms_db", $username, $password, $username, $database, $port);
