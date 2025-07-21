@@ -25,6 +25,5 @@ echo "Connected to MySQL successfully from PHP app!";
 //     echo "0 results";
 // }
 
-$conn
-
- you'd like help testing queries or setting up PHPUnit for database testing!
+$conn->close();
+?>
