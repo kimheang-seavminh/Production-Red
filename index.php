@@ -1,20 +1,30 @@
-
 <?php
-$host = '192.168.20.12';
-$db   = 'mydb';
-$user = 'kimheang';
-$pass = 'Seavminh@2024';
-$port = '32364';
-$charset = 'utf8mb4';
+$servername = getenv('192.168.20.12');
+$username = getenv('mydb');
+$password = getenv('Seavminh@2024');
+$dbname = getenv('kimheang');
+$portname = getenv('32364');
 
-$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-try {
-    $pdo = new PDO($dsn, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully!";
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-?>
+echo "Connected to MySQL successfully from PHP app!";
+
+// Example: Display data from a table (if you created one in Lab 5.3)
+// $sql = "SELECT id, name FROM my_table";
+// $result = $conn->query($sql);
+// if ($result->num_rows > 0) {
+//     while($row = $result->fetch_assoc()) {
+//         echo "id: " . $row["id"]. " - Name: " . $row["name"]. "<br>";
+//     }
+// } else {
+//     echo "0 results";
+// }
+
+$conn
+
  you'd like help testing queries or setting up PHPUnit for database testing!
