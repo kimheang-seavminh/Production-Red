@@ -6,7 +6,7 @@ $dbname = getenv('kimheang');
 $portname = getenv('32364');
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, $portname);
 
 // Check connection
 if ($conn->connect_error) {
